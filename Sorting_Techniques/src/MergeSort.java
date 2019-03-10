@@ -5,8 +5,7 @@ public class MergeSort {
             int mid = (low+high)/2;
             sortMerge(arr,low,mid);
             sortMerge(arr,mid+1,high);
-            merge(arr,mid,low,high);
-
+            merge(arr,mid,low,high);       //merge two sorted array.
         }
 
     }
@@ -17,6 +16,7 @@ public class MergeSort {
         int r1[] = new int [n2];
 
         // Had forgotten to fill l1 and r1
+
         for (int i = 0 ; i < n1 ; i++)
         {
             l1[i] = arr[low+i];
@@ -39,12 +39,12 @@ public class MergeSort {
             }
             k++;
         }
-        while(i<n1) {
+        while(i<n1) {                      //add left over elements
             arr[k] = l1[i];
             i++;
             k++;
         }
-      while(j<n2){
+      while(j<n2){                        //add left over elements
             arr[k] = r1[j];
             j++;
             k++;

@@ -8,8 +8,8 @@ public class QuickSort {
        }
 
     }
-    int partition (int arr[],int low, int high){
-
+    int partition (int arr[],int low, int high){          //all less than pivot elements to it's left
+                                                        //all greater than pivot elements to it's right
         int pivot = arr[high];
         int i = low-1;
         for(int j = low; j<high; j++){

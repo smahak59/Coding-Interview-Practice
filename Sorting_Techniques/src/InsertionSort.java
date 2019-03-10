@@ -6,12 +6,12 @@ public class InsertionSort {
             int key = arr[i];
             int j = i-1;
             while(j>=0 && arr[j]>key){
-                arr[j+1] = arr[j];
-                j--;
+                arr[j+1] = arr[j];               //Considering previous elements are already sorted
+                j--;                             // No swap
             }
             arr[j+1] = key;
         }
-            //To see every step of sorting - end one is the result.
+
             printArray(arr);
     }
 

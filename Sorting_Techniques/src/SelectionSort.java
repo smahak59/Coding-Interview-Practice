@@ -1,8 +1,8 @@
 public class SelectionSort {
 
     int arr[];
-    public void sortSelection(int arr[]) {
-        this.arr = arr;
+    public void sortSelection(int arr[]) {     //find the minimum element from the current element and remaining array elements to the right
+        this.arr = arr;                        //and swap it with the current element
         for(int i =0 ; i < arr.length; i++) {
             int min_indx = i;
             for(int j=i+1; j< arr.length; j++ ) {

@@ -6,7 +6,7 @@ public class BubbleSort {
             boolean swapped = false;
             for(int j = 0 ; j < arr.length-i-1; j++){
                 if(arr[j]>arr[j+1]){
-                    swapped = true;
+                    swapped = true;                    //To record if a swap is there in this traversal
                     int temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;

@@ -3,14 +3,14 @@ public class HeapSort {
     public void sortHeap(int arr[]) {
         this.arr = arr;
         int size = arr.length;
-        for(int i = ((size/2) -1);i>=0;i-- ){
-            heapify( arr, i,size);
+        for(int i = ((size/2) -1);i>=0;i-- ){         //size/2 -1 gives the largest parent
+            heapify( arr, i,size);                   // to make all roots greater than children
         }
         for(int i = size-1 ; i>= 0 ;i--){
             int temp = arr[i];
-            arr[i] = arr[0];
-            arr[0] = temp;
-            heapify(arr, 0 , i);
+            arr[i] = arr[0];                      //exchange top root element (largest)  with
+            arr[0] = temp;                        // end element and afterwards remove that
+            heapify(arr, 0 , i);               //end element for any further heapify it's already put to it's correct position(end).
         }
 
     }
