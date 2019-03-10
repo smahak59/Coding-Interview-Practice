@@ -15,7 +15,7 @@ public class MergeSort {
         int n2 = high - mid;
         int l1 [] = new int [n1];
         int r1[] = new int [n2];
-        
+
         // Had forgotten to fill l1 and r1
         for (int i = 0 ; i < n1 ; i++)
         {
