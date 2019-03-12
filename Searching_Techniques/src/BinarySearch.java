@@ -4,12 +4,12 @@ public class BinarySearch {
     public int bSearchRec(int ele, int low, int high,int arr[]){
         if(low<=high)
         {
-            int mid = low +(high - low) / 2;
+            int mid = low +(high - low) / 2;   //instead of (high+low)/2 to prevent overflow
             if(arr[mid] == ele){
                return mid;
             }
             if (arr[mid] > ele){
-               return bSearchRec(ele, low,mid-1,arr);
+               return bSearchRec(ele, low,mid-1,arr);  //need return here
             }
            else {
                return bSearchRec(ele, mid+1,high,arr);
@@ -20,7 +20,7 @@ public class BinarySearch {
     }
     public int bSearchItr(int ele,int arr[], int low, int high){
         while(low <= high){
-            int mid = low +(high - low) / 2;
+            int mid = low +(high - low) / 2;    //instead of (high+low)/2 to prevent overflow
             if(arr[mid] == ele){
                 return mid;
             }
