@@ -57,7 +57,7 @@ import java.io.*;
                     }
                     maxSoFar = Math.max(maxSoFar,currSum);      //maintain maximum dp state (sum) of all dpstates
                     if (maxSoFar == currSum){
-                        start = s;                            //index with which this sum was made
+                        start = s;                             //index with which this sum was made
                         end = e;
                     }
                 }

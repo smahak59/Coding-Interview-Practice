@@ -66,7 +66,7 @@ class DutchFlag {
             }
             StringBuffer strbf=new StringBuffer();
             for(int i = 0 ; i<num;i++){
-                strbf=strbf.append(arr[i]+" ");   //Used StringBuffer to decrease complexity
+                strbf=strbf.append(arr[i]+" ");   //Used StringBuffer to decrease time complexity (TLE was coming)
             }
             System.out.println(strbf);
 
