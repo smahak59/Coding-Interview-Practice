@@ -1,0 +1,7 @@
+1. https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
+See all approaches for above question.
+It's using dequeue and BST for optimal solution.
+
+2. Kth smallest element
+https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/
+See MinHeap,MaxHeap approach

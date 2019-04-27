@@ -4,3 +4,5 @@ TODO:
 2. Recursive Bubble Sort
 3. Recursive Insertion Sort
 4. Inversion Count Problem
+
+Do all the sortings again in depth
