@@ -47,18 +47,18 @@ package recursion;
  // Definition for a binary tree node.
  class TreeNode {
       int val;
-      TreeNode left;
-      TreeNode right;
+      Node left;
+      Node right;
       TreeNode(int x) { val = x; }
   }
 
 class Solution {
     int ans = 0;
-    public int longestUnivaluePath(TreeNode root) {
+    public int longestUnivaluePath(Node root) {
         findMaxPathWithRootVal(root);
         return ans;
     }
-    public int findMaxPathWithRootVal(TreeNode root){
+    public int findMaxPathWithRootVal(Node root){
         if(root == null) return 0;
         int leftMax = findMaxPathWithRootVal(root.left);
         int rightMax = findMaxPathWithRootVal(root.right);

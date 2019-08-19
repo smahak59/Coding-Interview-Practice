@@ -55,7 +55,13 @@ class EqualSumSubsetPartition
                 continue;
             }
             else{
-                if(subSetSum(arr,arr.length,s)){
+               /* if(subSetSum(arr,arr.length,s)){
+                    System.out.println("YES");
+                }
+                else{
+                    System.out.println("NO");
+                }*/
+                if(findSum(arr,0,0,s)){
                     System.out.println("YES");
                 }
                 else{
@@ -68,9 +74,11 @@ class EqualSumSubsetPartition
 
         }
     }
+
+    //Using DP
     public static boolean subSetSum(int set[], int n, int sum){
         // The value of subset[i][j] will be true if there is a
-        // subset of set[0..j-1] with sum equal to i
+        // subset of set[0..j-1] with sum equal to i subset [index][sum]
         boolean subset[][] =
                 new boolean[n+1][sum+1];
 
@@ -97,5 +105,13 @@ class EqualSumSubsetPartition
 
 
         return subset[n][sum];
+    }
+
+    //Using recursion
+    public static boolean findSum(int arr[], int i, int currSum, int sum){
+        if(currSum == sum)return true;
+        else if (i==arr.length) return false;
+        boolean res = findSum(arr, i+1,currSum+arr[i],sum)|| findSum(arr, i+1,currSum,sum);
+        return res;
     }
 }
